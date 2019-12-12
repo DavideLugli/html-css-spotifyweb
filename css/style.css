@@ -6,6 +6,7 @@
 
 body {
   background-color: black;
+  font-family: 'Raleway', sans-serif;
 }
 
 .wrapper {
@@ -37,7 +38,6 @@ body {
   margin-left: 320px;
   padding: 20px;
 } */
-
 /* Float */
 /* .main {
   height: calc(100% - 90px);
@@ -61,8 +61,6 @@ body {
   background-color: orange;
   overflow-y: scroll;
 } */
-
-
 /* Flex */
 .main {
   display: flex;
@@ -70,6 +68,7 @@ body {
   height: calc(100% - 90px);
   overflow: hidden;
 }
+
 /* main nav */
 .main-nav {
   display: flex;
@@ -79,18 +78,20 @@ body {
   height: 100%;
   background: blue;
 }
+
 .main-nav-header {
   background-color: purple;
 }
+
 .main-nav-main {
   min-height: 150px;
   overflow-y: auto;
   flex-grow: 2;
   background-color: lime;
 }
-.playlist {
 
-}
+.playlist {}
+
 .main-nav-footer {
   background-color: brown;
 }
@@ -102,6 +103,7 @@ body {
   background-color: orange;
   overflow-y: scroll;
 }
+
 .call-to-action {
   position: fixed;
   top: 0;
@@ -114,6 +116,7 @@ body {
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .btn {
   display: inline-block;
   font-size: 20px;

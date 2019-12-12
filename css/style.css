@@ -188,7 +188,7 @@ h3 {
   align-items: center;
   width: calc(100% - 320px);
   height: 70px;
-  padding: 5px;
+  padding: 5px 20px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -230,22 +230,68 @@ a.btn.btn_cta {
   justify-content: space-between;
 }
 
+/* informazioni traccia */
 .footer_track {
   display: flex;
   align-items: center;
 }
-.footer_track img{
+
+.footer_track img {
   width: 15%;
 }
 
 .track_info {
-padding-left: 10px;
-padding-right: 25px;
+  padding-left: 10px;
+  padding-right: 25px;
 }
+
 .track_info h4 {
   margin: 0;
 }
 
-.track_icons i{
+.track_icons i {
   padding: 5px;
+}
+
+/* footer media player */
+.flex_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.flex_list i {
+  font-size: 18px;
+  color: white;
+}
+
+.flex_list i.big_icon {
+  font-size: 40px;
+}
+
+.media_player {
+  width: 30%;
+}
+
+.media_timer {
+  display: flex;
+  align-items: center;
+}
+
+.media_timer p {
+  margin: 0;
+}
+
+.grey-line {
+  margin: 0 5px;
+  height: 5px;
+  width: 100%;
+  background-color: grey;
+}
+
+.white-line {
+  height: 100%;
+  width: 20%;
+  background-color: white;
 }

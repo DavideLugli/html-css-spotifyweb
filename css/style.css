@@ -175,6 +175,10 @@ h3 {
   overflow-y: scroll;
 }
 
+.main-content-main {
+  margin-top: 70px;
+}
+
 .call-to-action {
   position: fixed;
   top: 0;
@@ -183,7 +187,7 @@ h3 {
   justify-content: flex-end;
   align-items: center;
   width: calc(100% - 320px);
-  height: 90px;
+  height: 70px;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -192,6 +196,21 @@ h3 {
   display: inline-block;
   font-size: 20px;
   background-color: white;
+}
+
+.btn.btn_cta {
+  border-radius: 15px;
+  padding: 5px 20px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+a.btn.btn_cta {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* footer */

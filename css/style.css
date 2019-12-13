@@ -218,26 +218,26 @@ a.btn.btn_cta {
   width: 100%;
   height: 90px;
   background-color: pink;
-  display: flex;
 }
 
 .footer-content {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
-  margin: auto 0;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
 }
 
-/* informazioni traccia */
+/* informazioni traccia, parte sx footer*/
 .footer_track {
   display: flex;
+  /* justify-content: center; */
   align-items: center;
+  flex-basis: 20%;
 }
 
 .footer_track img {
-  width: 15%;
+  width: 60px;
 }
 
 .track_info {
@@ -253,29 +253,29 @@ a.btn.btn_cta {
   padding: 5px;
 }
 
-/* footer media player */
-.flex_list {
+/* footer media player, parte centrale */
+.media_player {
+  flex-basis: 65%;
+}
+
+ul.flex_list {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0;
 }
 
 .flex_list i {
-  font-size: 18px;
+  font-size: 15px;
   color: white;
 }
 
 .flex_list i.big_icon {
-  font-size: 40px;
-}
-
-.media_player {
-  width: 30%;
+  font-size: 35px;
 }
 
 .media_timer {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -286,11 +286,37 @@ a.btn.btn_cta {
 .grey-line {
   margin: 0 5px;
   height: 5px;
-  width: 100%;
+  width: 50%;
   background-color: grey;
 }
 
 .white-line {
+  height: 100%;
+  width: 20%;
+  background-color: white;
+}
+
+/* parte dx del footer */
+.footer_right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-basis: 15%;
+}
+
+.media_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.grey-line-right {
+  height: 5px;
+  flex-basis: 60%;
+  background-color: grey;
+}
+
+.white-line-right {
   height: 100%;
   width: 20%;
   background-color: white;

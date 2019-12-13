@@ -13,7 +13,7 @@ h3 {
   font-size: 18px;
   color: white;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .wrapper {
@@ -69,6 +69,7 @@ h3 {
   overflow-y: scroll;
 } */
 /* Flex */
+/* main content centrale */
 .main {
   display: flex;
   flex-direction: row;
@@ -76,7 +77,92 @@ h3 {
   overflow: hidden;
 }
 
-/* main nav */
+/* main menu nav */
+.main-content-main ul.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content-main ul.flex-container a {
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* contenuto main */
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content-container h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.flex-row-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.image-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-container {
+  padding: 5px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.img-container h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.img-relative {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.58);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.img-relative:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay-content h2 {
+  color: white;
+  font-size: 30px;
+}
+
+/* main nav sx */
 .main-nav {
   display: flex;
   flex-direction: column;

@@ -273,7 +273,7 @@ ul.flex-container a.active::after {
   align-items: center;
   width: calc(100% - 320px);
   height: 70px;
-  padding: 5px 20px;
+  padding: 5px 30px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -288,6 +288,11 @@ ul.flex-container a.active::after {
   padding: 5px 20px;
   border: 1px solid white;
   background-color: transparent;
+  transition: 1s;
+}
+
+.btn.btn_cta:hover {
+  transform: scale(1.1);
 }
 
 a.btn.btn_cta {
@@ -373,6 +378,7 @@ ul.flex_list li {
 }
 
 .grey-line {
+  position: relative;
   margin: 0 5px;
   height: 5px;
   width: 50%;
@@ -389,6 +395,14 @@ ul.flex_list li {
 
 .white-line:hover {
   background-color: #adff2f;
+}
+
+.grey-line:hover .white-line {
+  background-color: #adff2f;
+}
+
+.grey-line:hover .rounded_cursor {
+  display: block;
 }
 
 /* parte dx del footer */
@@ -429,31 +443,14 @@ ul.flex_list li {
   display: none;
 }
 
-.white-line-right:hover {
-background-color: #adff2f;
-}
-.white-line-right:hover .rounded_cursor {
-display: block;
+.grey-line-right:hover .white-line-right {
+  background-color: #adff2f;
 }
 
-/* .white-line-right::after {
-position: absolute;
-top: -140%;
-left: 40%;
-transform: translateY(-40%);
-transform: translateX(100%);
-content: "\f111";
-font-family: "Font Awesome 5 Free";
-font-weight: 900;
-color: white;
-display: none;
+.grey-line-right:hover .rounded_cursor {
+  display: block;
 }
-.white-line-right:hover .white-line-right::after{
-display: block;
-}
-.white-line-right:hover {
-  background-color: #adff2f;
-} */
+
 @media screen and (min-width: 768px) {
   .img-container {
     flex-basis: calc(100% / 6);

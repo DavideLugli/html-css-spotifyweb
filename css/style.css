@@ -16,59 +16,26 @@ h3 {
   text-transform: capitalize;
 }
 
+p {
+  color: #9A9A9A;
+}
+
+a {
+  color: #9A9A9A;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .wrapper {
   width: 100%;
   height: 100vh;
   background-color: red;
 }
 
-/* Fixed */
-/* footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 90px;
-  background-color: pink;
-}
-
-.main-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 320px;
-  height: calc(100% - 90px);
-  background: blue;
-}
-.main-content {
-  width: calc(100% - 320px);
-  margin-left: 320px;
-  padding: 20px;
-} */
-/* Float */
-/* .main {
-  height: calc(100% - 90px);
-  overflow: hidden;
-}
-.main:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.main-nav {
-  float: left;
-  width: 320px;
-  height: 100%;
-  background: blue;
-}
-.main-content {
-  float: left;
-  width: calc(100% - 320px);
-  height: 100%;
-  background-color: orange;
-  overflow-y: scroll;
-} */
-/* Flex */
 /* main content centrale */
 .main {
   display: flex;
@@ -81,15 +48,23 @@ h3 {
 .main-content-main ul.flex-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 15px;
 }
 
 .main-content-main ul.flex-container a {
-  color: white;
   font-weight: 700;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+ul.flex-container a.active::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: 2px;
+  background-color: #adff2f;
 }
 
 /* contenuto main */
@@ -159,6 +134,30 @@ h3 {
 .overlay-content h2 {
   color: white;
   font-size: 30px;
+}
+
+.img-relative-rounded {
+  position: relative;
+}
+
+.img-relative-rounded img {
+  border-radius: 50%;
+}
+
+.overlay-rounded {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.58);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.img-relative-rounded:hover .overlay-rounded {
+  opacity: 1;
 }
 
 /* main nav sx */
@@ -256,7 +255,7 @@ h3 {
 .main-content {
   width: calc(100% - 320px);
   height: 100%;
-  background-color: orange;
+  background-color: #141922;
   overflow-y: scroll;
 }
 
@@ -303,7 +302,7 @@ a.btn.btn_cta {
 .footer {
   width: 100%;
   height: 90px;
-  background-color: pink;
+  background-color: #282828;
 }
 
 .footer-content {
@@ -350,6 +349,10 @@ ul.flex_list {
   align-items: center;
 }
 
+ul.flex_list li {
+  padding: 0 10px;
+}
+
 .flex_list i {
   font-size: 15px;
   color: white;
@@ -374,12 +377,18 @@ ul.flex_list {
   height: 5px;
   width: 50%;
   background-color: grey;
+  border-radius: 5px;
 }
 
 .white-line {
   height: 100%;
   width: 20%;
   background-color: white;
+  border-radius: 5px;
+}
+
+.white-line:hover {
+  background-color: #adff2f;
 }
 
 /* parte dx del footer */
@@ -390,26 +399,63 @@ ul.flex_list {
   flex-basis: 15%;
 }
 
-.media_icons {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.footer_right i {
+  color: white;
 }
 
 .grey-line-right {
+  position: relative;
   height: 5px;
   flex-basis: 60%;
   background-color: grey;
+  border-radius: 5px;
 }
 
 .white-line-right {
   height: 100%;
   width: 20%;
   background-color: white;
+  border-radius: 5px;
 }
 
+.rounded_cursor {
+  position: absolute;
+  top: -3px;
+  left: 18%;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+}
+
+.white-line-right:hover {
+background-color: #adff2f;
+}
+.white-line-right:hover .rounded_cursor {
+display: block;
+}
+
+/* .white-line-right::after {
+position: absolute;
+top: -140%;
+left: 40%;
+transform: translateY(-40%);
+transform: translateX(100%);
+content: "\f111";
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+color: white;
+display: none;
+}
+.white-line-right:hover .white-line-right::after{
+display: block;
+}
+.white-line-right:hover {
+  background-color: #adff2f;
+} */
 @media screen and (min-width: 768px) {
   .img-container {
-    flex-basis: calc((100% / 6) - 10px);
+    flex-basis: calc(100% / 6);
   }
 }

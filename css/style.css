@@ -49,6 +49,7 @@ a:hover {
   display: flex;
   justify-content: center;
   padding-top: 15px;
+  flex-wrap: wrap;
 }
 
 .main-content-main ul.flex-container a {
@@ -64,7 +65,7 @@ ul.flex-container a.active::after {
   margin: 0 auto;
   width: 50%;
   height: 2px;
-  background-color: #adff2f;
+  background-color: #1ED760;
 }
 
 /* contenuto main */
@@ -165,7 +166,7 @@ ul.flex-container a.active::after {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 320px;
+  width: 200px;
   height: 100%;
   background-color: #040404;
   /* padding-left: 20px; */
@@ -179,6 +180,10 @@ ul.flex-container a.active::after {
   padding-top: 15px;
   padding-left: 10px;
   padding-bottom: 15px;
+}
+
+img.logo_xs {
+  width: 30px;
 }
 
 .main-nav-header .logo {
@@ -250,7 +255,11 @@ ul.flex-container a.active::after {
 }
 
 .main_footer_container_top img {
-  width: 7%;
+  width: 15px;
+}
+
+.main_footer_container_top a {
+  font-size: 12px;
 }
 
 .main_footer_container_bottom {
@@ -259,18 +268,19 @@ ul.flex-container a.active::after {
 
 .main_footer_container_bottom a.bold_link {
   font-weight: 700;
+  font-size: 15px;
   padding-left: 5px;
 }
 
 .main_footer_container_bottom img {
-  width: 10%;
+  width: 15%;
   border-radius: 50%;
   border: 1px solid white;
 }
 
 /* main content */
 .main-content {
-  width: calc(100% - 320px);
+  width: calc(100% - 200px);
   height: 100%;
   background-color: #141922;
   overflow-y: scroll;
@@ -288,7 +298,7 @@ ul.flex-container a.active::after {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: calc(100% - 320px);
+  width: calc(100% - 200px);
   height: 70px;
   padding: 5px 30px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -360,6 +370,10 @@ a.btn.btn_cta {
   padding: 5px;
 }
 
+h4>a.bold_link {
+  font-weight: 700;
+}
+
 /* footer media player, parte centrale */
 .media_player {
   flex-basis: 65%;
@@ -382,6 +396,11 @@ ul.flex_list li {
 
 .flex_list i.big_icon {
   font-size: 35px;
+  transition: 0.2s;
+}
+
+.flex_list i.big_icon:hover {
+  transform: scale(1.2);
 }
 
 .media_timer {
@@ -468,8 +487,129 @@ ul.flex_list li {
   display: block;
 }
 
-@media screen and (min-width: 768px) {
-  .img-container {
-    flex-basis: calc(100% / 6);
+/* media queries */
+/* query xs */
+@media screen and (max-width:768px) {
+  .image-row {
+    flex-wrap: wrap;
   }
-}
+
+  .img-container {
+    flex-basis: calc(100% / 2);
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+  }
+
+  .list_item_flex .active {
+    border: 0;
+  }
+
+  .main_footer_container_top {
+    border-bottom: 0;
+  }
+
+  .main_footer_container_top img {
+    width: 20px;
+  }
+
+  .main_footer_container_bottom {
+    padding: 10px 5px 5px 0;
+  }
+
+  .main_footer_container_bottom img {
+    width: 25px;
+  }
+
+  .main-content {
+    width: calc(100% - 50px);
+  }
+
+  .call-to-action {
+    width: calc(100% - 50px);
+  }
+
+  .footer_right i {
+    padding: 0 5px;
+  }
+
+  .footer_right i:first-child {
+    padding-left: 0;
+  }
+
+  /* query small */
+  @media screen and (min-width:768px) and (max-width:992px) {
+    .image-row {
+      flex-wrap: wrap;
+    }
+
+    .img-container {
+      flex-basis: calc(100% / 2);
+    }
+
+    .footer_right i {
+      padding: 0 5px;
+    }
+
+    .footer_right i:first-child {
+      padding-left: 0;
+    }
+
+    .track_info {
+      padding-right: 15px;
+    }
+
+    .track_info a {
+      font-size: 12px;
+    }
+
+    .track_info a.bold_link {
+      font-size: 16px;
+    }
+  }
+
+  /* query medium */
+  @media screen and (min-width:992px) and (max-width:1200px) {
+    .image-row {
+      flex-wrap: wrap;
+    }
+
+    .img-container {
+      flex-basis: calc(100% / 4);
+    }
+
+    .footer_right i {
+      padding: 0 10px;
+    }
+
+    .footer_right i:first-child {
+      padding-left: 0;
+    }
+
+    .track_info {
+      padding-right: 15px;
+    }
+
+    .track_info a {
+      font-size: 10px;
+    }
+
+    .track_info a.bold_link {
+      font-size: 16px;
+    }
+
+    .track_icons {
+      display: flex;
+    }
+  }
+
+  /* query lg */
+  @media screen and (min-width:1200px) {
+    .img-container {
+      flex-basis: calc(100% / 6);
+    }
+  }
